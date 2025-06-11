@@ -1,4 +1,4 @@
-# consistent-KG-QA
+# Consistent-KG-QA
 
 This repo contains the code for the 2025 Masters Thesis ***Consistent Question Answering via Knowledge Graph Querying***. It describes how to create the runs that the paper's ananlysis is based on. 
 
@@ -87,9 +87,7 @@ https://neo4j.com/docs/operations-manual/current/installation/ and https://neo4j
 
 ```
 cd Consistent-QA-KG/Neo4jSetup
-
 python setup_artificial_database_trex.py --trex_data_folder "../../trex_data/data/TREx" --neo4j_uri bolt://localhost:7687 --neo4j_user neo4j --neo4j_password <neo4j password>
-
 cd ../..
 ```
 
