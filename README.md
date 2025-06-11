@@ -191,7 +191,7 @@ copy results\2025_05_28-22_29_06\results\* completed_run_filtered_dataset\inputs
 ```
 
 
-### Run analysis, this will create completed_run_filtered_dataset\outputs
+Run analysis, this will create completed_run_filtered_dataset\outputs
 
 ```
 cd Consistent-QA-KG\Analysis
