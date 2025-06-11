@@ -1,0 +1,43 @@
+[
+	"USER INPUT: 'Holmenkollen is located in [MASK] . What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Holmenkollen\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'The Misty Mountains is located in [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"The Misty Mountains\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'The headquarter of The Daily Planet is in [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"The Daily Planet\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'Hell's Kitchen is located in [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Hell's Kitchen\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'The Colossus of Rhodes was created in [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"The Colossus of Rhodes\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'Ashojdens BK was started in [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Ashojdens BK\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'Aberforth Dumbledore worked in [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Aberforth Dumbledore\"})-[:COUNTRY|:CONTINENT|:HEADQUARTERS_LOCATION|:LOCATION|:LOCATION_OF_FORMATION|:COUNTRY_OF_ORIGIN|:LOCATION_OF_FORMATION|:WORK_LOCATION]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Karl XVI Gustaf is native to [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Karl XVI Gustaf\"})-[:PLACE_OF_BIRTH]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Ronnie Pettersson passed away at [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Ronnie Pettersson\"})-[:PLACE_OF_DEATH]->(w2) RETURN w2.name'",
+
+	"USER INPUT: '[MASK] is the spezialization of Ville Vessla. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Ville Vessla\"})-[:FIELD_OF_WORK|:OCCUPATION]->(w2) RETURN w2.name'",
+	"USER INPUT: 'Mycroft Holmes, is a [MASK] by profession. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Mycroft Holmes\"})-[:FIELD_OF_WORK|:OCCUPATION]->(w2) RETURN w2.name'",
+
+	"USER INPUT: '[MASK] is Ole Lund Kirkegaard's native language. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Ole Lund Kirkegaard\"})-[:NATIVE_LANGUAGE|:ORIGINAL_LANGUAGE|:LANGUAGE_OF|:LANGUAGES_SPOKEN]->(w2) RETURN w2.name'",
+	"USER INPUT: 'The language of Finn Family Mumintroll is [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Finn Family Mumintroll\"})-[:NATIVE_LANGUAGE|:ORIGINAL_LANGUAGE|:LANGUAGE_OF|:LANGUAGES_SPOKEN]->(w2) RETURN w2.name'",
+	"USER INPUT: 'The Amber Spyglass is a work in the [MASK] language. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"The Amber Spyglass\"})-[:NATIVE_LANGUAGE|:ORIGINAL_LANGUAGE|:LANGUAGE_OF|:LANGUAGES_SPOKEN]->(w2) RETURN w2.name'",
+	"USER INPUT: '[MASK] is the language typically used by Lyra Silvertongue. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Lyra Silvertongue\"})-[:NATIVE_LANGUAGE|:ORIGINAL_LANGUAGE|:LANGUAGE_OF|:LANGUAGES_SPOKEN]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Johnny Hodges, who plays [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Johnny Hodges\"})-[:GENRE]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'LaGuardia Airport is named in [MASK]'s honor. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"LaGuardia Airport\"})-[:NAMED_AFTER]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Bruce Lee is a follower of [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Bruce Lee\"})-[:RELIGION_OR_WORLDVIEW]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Jim Beam Whiskey, produced by [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Jim Beam Whiskey\"})-[:MANUFACTURER|:DEVELOPER]->(w2) RETURN w2.name'",
+	"USER INPUT: '[MASK], that created JAS 39 Gripen. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"JAS 39 Gripen\"})-[:MANUFACTURER|:DEVELOPER]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'The White Stripes is represented by music label [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"The White Stripes\"})-[:RECORD_LABEL]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Protons, a type of [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Protons\"})-[:SUBCLASS_OF]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Skyrim is part of [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Skyrim\"})-[:PART_OF]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Fille Eliasson plays in [MASK] position. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Fille Eliasson\"})-[:POSITION_PLAYED]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Dead Like Me debuted on [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Dead Like Me\"})-[:ORIGINAL_BROADCASTER]->(w2) RETURN w2.name'",
+
+	"USER INPUT: 'Emerald City, the capital of [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Emerald City\"})-[:CAPITAL_OF|:CAPITAL]->(w2) RETURN w2.name'",
+	"USER INPUT: 'Halland, which has the capital city [MASK]. What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Halland\"})-[:CAPITAL_OF|:CAPITAL]->(w2) RETURN w2.name'"
+]

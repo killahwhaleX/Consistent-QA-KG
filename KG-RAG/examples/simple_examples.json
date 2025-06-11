@@ -1,0 +1,5 @@
+[
+    "USER INPUT: 'The capital of Spain is [MASK] . What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Spain\"})-[:CAPITAL]->( w2) RETURN w2.name'",
+    "USER INPUT: 'The capital of Halland is [MASK] . What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Halland\"})-[:CAPITAL]->( w2) RETURN w2.name'",
+    "USER INPUT: 'The capital of Sweden is [MASK] . What is [MASK]?' QUERY: 'MATCH (w1 {name: \"Sweden\"})-[:CAPITAL]->( w2) RETURN w2.name'"
+]

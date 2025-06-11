@@ -1,0 +1,20 @@
+#general
+torch
+transformers  #==3.5.0
+wandb
+spur
+tqdm
+jsonlines
+scipy
+matplotlib
+pandas
+
+#import data to KG
+neo4j
+wikidata
+
+#TextToCypher
+dotenv
+neo4j-graphrag
+ollama
+cohere

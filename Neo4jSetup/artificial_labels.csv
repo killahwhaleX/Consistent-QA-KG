@@ -1,0 +1,31 @@
+relation,rel_label,subj_label,obj_label
+P17,country,entity,country
+P19,place of birth,person,territory
+P20,place of death,person,territory
+P27,country of citizenship,person,territory
+P30,continent,location,continent
+P36,capital,territory,city
+P101,field of work,entity,domain
+P103,native language,person,language
+P106,occupation,person,occupation
+P127,owned by,entity,owner
+P131,located in,location,territory
+P136,genre,musical entity,genre
+P138,named after,entity,entity
+P140,religion or worldview,entity,faith
+P159,headquarters location,organization,territory
+P176,manufacturer,product,company
+P178,developer,product,company
+P264,record label,musical entity,record label
+P276,location,entity,territory
+P279,subclass of,entity,parent class
+P361,part of,component,whole
+P364,original language,media,language
+P407,language of ,entity,language
+P413,position played,athlete,position
+P449,original broadcaster,show,network
+P495,country of origin,entity,country
+P740,location of formation,organization,location
+P937,work location,person,location
+P1376,capital of,city,territory
+P1412,languages spoken,person,language

@@ -1,0 +1,7 @@
+[
+  "USER INPUT: 'The movie [MASK] had the highest budget . What is [MASK]?'QUERY: 'MATCH (m:Movie) RETURN m ORDER BY m.budget DESC LIMIT 1'",
+  "USER INPUT: 'The most common singer citizenship ins [MASK]. What is [MASK]?' QUERY: 'MATCH (singer:singer) RETURN singer.Citizenship ORDER BY singer.Citizenship DESC LIMIT 1'",
+  "USER INPUT: 'User [MASK] has provided the answer with the highest score. What is [MASK]?' QUERY: 'MATCH (a:Answer) WITH max(a.score) AS max_score MATCH (a:Answer {score: max_score}) MATCH (u:User)-[:PROVIDED]->(a) RETURN u.display_name'",
+  "USER INPUT: 'The movie [MASK] has the highest IMDb rating among those shorter than 90 minutes. What is [MASK]?' QUERY: 'MATCH (m:Movie) WHERE m.runtime < 90 WITH m ORDER BY m.imdbRating DESC LIMIT 1 RETURN m.title'",
+  "USER INPUT: 'The city [MASK] has the lowest average sentiment score for articles mentioning its organizations. What is [MASK]?' QUERY: 'MATCH (o:Organization)-[:IN_CITY]->(c:City) WITH c, [(o)<-[:MENTIONS]-(a:Article) | a.sentiment] AS sentiments WITH c, apoc.coll.avg(sentiments) AS avgSentiment ORDER BY avgSentiment ASC LIMIT 1 RETURN c.name AS cityWithLowestSentiment'"
+]

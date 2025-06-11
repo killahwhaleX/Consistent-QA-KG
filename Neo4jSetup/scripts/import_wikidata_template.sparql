@@ -1,0 +1,16 @@
+SELECT  ?item ?itemLabel ?wd ?wdLabel ?ps_ ?ps_Label ?wdpq ?wdpqLabel ?pq_ ?pq_Label {
+  VALUES (?item) {(wd:%%object_id%%)}
+  
+  ?item ?p ?statement .
+  ?statement ?ps ?ps_ .
+  
+  ?wd wikibase:claim ?p.
+  ?wd wikibase:statementProperty ?ps.
+  
+  OPTIONAL {
+  ?statement ?pq ?pq_ .
+  ?wdpq wikibase:qualifier ?pq .
+  }
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
+} ORDER BY ?wd ?statement ?ps_

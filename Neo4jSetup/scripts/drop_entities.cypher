@@ -1,0 +1,4 @@
+MATCH (n) 
+CALL (n) { WITH n 
+DETACH DELETE n 
+} 

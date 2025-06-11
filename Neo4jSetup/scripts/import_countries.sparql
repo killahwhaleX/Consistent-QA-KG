@@ -1,0 +1,35 @@
+PREFIX neo: <neo4j://voc#> 
+CONSTRUCT { 
+  ?country a neo:Country . 
+  ?country neo:countryName ?countryLabel . 
+  
+  ?country neo:inContinent ?continent .
+  ?continent a neo:Continent .  
+  ?continent neo:continentName ?continentLabel . 
+  
+  ?country neo:hasCapital ?capital . 
+  ?capital a neo:City .  
+  ?capital neo:CityName ?cityLabel . 
+} 
+WHERE { 
+  ?country wdt:P31 wd:Q6256 .
+
+  ?country rdfs:label ?countryLabel .
+  FILTER(LANG(?countryLabel) = "en") . 
+  
+  ?country wdt:P30 ?continent . 
+  ?continent rdfs:label ?continentLabel . 
+  FILTER(LANG(?continentLabel) = "en") . 
+
+  ?country wdt:P36 ?capital . 
+  ?capital rdfs:label ?cityLabel . 
+  FILTER(LANG(?cityLabel) = "en") . 
+ 
+  # Exclude countries that have a dissolution date (P576)
+  FILTER NOT EXISTS { ?country wdt:P576 ?dissolutionDate }
+
+  # Exclude historical countries (Q3024240 - historical country)
+  FILTER NOT EXISTS { ?country wdt:P31 wd:Q3024240 }  
+
+  FILTER NOT EXISTS { ?country wdt:1366 ?replacedBy }
+}

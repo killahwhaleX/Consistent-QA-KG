@@ -1,0 +1,1 @@
+We are looking at the following statement: %question%  What should [MASK] be for this statement to be true?

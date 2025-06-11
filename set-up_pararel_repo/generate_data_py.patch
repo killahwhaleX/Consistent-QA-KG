@@ -1,0 +1,56 @@
+diff --git a/pararel/pararel/consistency/generate_data.py b/pararel/pararel/consistency/generate_data.py
+index 4fb0d97..626ba46 100644
+--- a/pararel/pararel/consistency/generate_data.py
++++ b/pararel/pararel/consistency/generate_data.py
+@@ -3,9 +3,20 @@ import glob
+ import pickle
+ import random
+ import os
++import sys
+ import json
++from pathlib import Path
+ import pandas as pd
+ 
++scripts_path = Path().absolute() / ".." / ".." 
++scripts_path = str(scripts_path.resolve())
++
++#print(scripts_path)
++
++if scripts_path not in sys.path:
++    sys.path.append(scripts_path)
++
++
+ from pararel.consistency import utils
+ from pararel.consistency.lm_pipeline import parse_prompt
+ from pararel.consistency.encode_consistency_probe import filter_a_an_vowel_mismatch
+@@ -14,8 +25,14 @@ import random
+ random.seed(42)
+ 
+ def get_pararel_prompt(sample, prompt):
+-   return {'prompt': parse_prompt(prompt, sample["sub_label"], "[MASK]"),
+-                                'sub_label': sample["sub_label"], 'obj_label': sample["obj_label"]}
++   return {
++            'prompt': parse_prompt(prompt, sample["sub_label"], "[MASK]"),
++            'sub_label': sample["sub_label"], 
++            'obj_label': sample["obj_label"], 
++            'uuid': sample["uuid"],
++            'rel_ix': sample["relation"] + "_" + str(sample["index"]),
++            'pattern_ix' :sample["pattern_ix"]
++            }
+ 
+ def get_atlas_prompt(sample, prompt):
+     # remove space before mask token for Atlas
+@@ -95,8 +112,12 @@ def generate_data(folder_name, relations_given, data_path, format_prompt, genera
+                 elif not random_passages_data_paths == []:
+                     passages = random.sample(all_passages, num_random_passages)
+                     passages_pattern = ""
+-                for node in graph.nodes():
++                for pattern_ix, node in enumerate(graph.nodes()):
+                     pattern = node.lm_pattern
++                    d['index'] = i
++                    d['pattern_ix'] = pattern_ix
++                    d['relation'] = relation
++
+                     dict_results = POSSIBLE_FORMATS[format_prompt](d, pattern)
+                     if atlas_data_path is not None or not random_passages_data_paths == []:
+                         dict_results["passages_pattern"] = passages_pattern
